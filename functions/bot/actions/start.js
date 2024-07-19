@@ -2,6 +2,7 @@ const { newUser} = require('../components/fauna')
 const { getUser } = require('../components/helper')
 
 module.exports = async ctx => {
+  console.log({ctx});
   const { id, isBot, name } = getUser(ctx.from)
 
   if (isBot) {
