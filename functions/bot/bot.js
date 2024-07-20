@@ -7,9 +7,10 @@ bot.start(ctx => {
   return startAction(ctx)
 })
 
+bot.command('rolldice6', (ctx) => ctx.reply(Math.floor(Math.random() * 6) + 1));
+
 exports.handler = async event => {
   try {
-    console.log({event: JSON.stringify(event)});
     await bot.handleUpdate(JSON.parse(event.body));
     return { statusCode: 200, body: '' };
   } catch (e) {

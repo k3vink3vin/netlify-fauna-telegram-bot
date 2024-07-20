@@ -11,9 +11,9 @@ exports.newUser = (id) => {
         { data: { userId: id } },
       )
     ).then(ret => {
-      res(true)
+      res(true);
     }).catch(err => {
-      res(false)
+      res(false);
     });
   })
 }
