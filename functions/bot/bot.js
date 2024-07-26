@@ -7,7 +7,7 @@ bot.start(ctx => {
   return startAction(ctx)
 })
 
-bot.command('rolldice6', (ctx) => ctx.reply(Math.floor(Math.random() * 6) + 1));
+bot.command('roll', (ctx) => ctx.reply(Math.floor(Math.random() * 6) + 1));
 
 exports.handler = async event => {
   try {
@@ -17,5 +17,4 @@ exports.handler = async event => {
     console.log(e);
     return { statusCode: 400, body: 'This endpoint is meant for bot and telegram communication' };
   }
-
 }
